@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Movie App
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,24 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div align ="centre">
+    <!-- <ul>
+      <li *ngFor="let movie of movies"></li>
+        <img src ={{movie.Poster}} width="400" height="250">
+        <p>{{movie.Title}}</p>
+        <p>{{movie.Year}}</p>
+    </ul> -->
+      
+      <ion-card *ngFor="let movie of movies">
+      <img alt="Silhouette of mountains" src={{movie.Poster}} />
+      <ion-card-header>
+        <ion-card-title>Card Title</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>
